@@ -40,22 +40,27 @@ public class EjemploCalculadora {
             
             switch (opcionOperacion) {
                 case 1:
-                    resultado = calculadoraElegida.sumar(numero1, numero2);
+                    resultado = calculadoraElegida.sumar();
                     break;
                 case 2: 
-                    resultado = calculadoraElegida.restar(numero1, numero2);
+                    resultado = calculadoraElegida.restar();
                     break;
                 case 3:
-                    resultado = calculadoraElegida.multiplicar(numero1, numero2);
+                    resultado = calculadoraElegida.multiplicar();
                     break;
                 case 4:
-                    resultado = calculadoraElegida.dividir(numero1, numero2);
+                    resultado = calculadoraElegida.dividir();
                     break;
                 default:
                     System.out.println("Operación no válida.");
             }
             
-            System.out.println("Resultado: " + resultado);
+            if(Double.isNaN(resultado)) {
+            	System.out.println("Error al menos uno de los operadores no es positivo o es cero");
+            } else {
+                System.out.println("Resultado: " + resultado);
+            }
+
             
             System.out.println("¿Desea realizar otra operación?\n1. Sí\n2. No");
             opcion = sc.nextInt();
