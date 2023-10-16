@@ -32,6 +32,7 @@ public class EjemploAscensor {
 		consorcioCallePeron.cerrarPuerta();
 		System.out.println(consorcioCallePeron.getPesoActual());
 		consorcioCallePeron.subir();
+		System.out.println(consorcioCallePeron.getSobrecarga());
 		System.out.println("El ascensor se encuentra en el piso " + consorcioCallePeron.getPisoActual());
 		sc.close();
 
